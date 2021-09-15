@@ -1,7 +1,9 @@
 let money = document.getElementById("money")
-const getCoffee = () => {
-    if (money.value >= 50) {
-        console.log("Кофе готов")
+const getCoffee = (price,name) => {
+    if (money.value >= price) {
+        console.log(name+" готов")
+        console.log("Сдача: "+(money.value=money.value-price))
+
     } else {
         console.log("Нет денег, нет кофе!")
     }
