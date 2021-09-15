@@ -11,15 +11,18 @@
 
     <title>Coffee machine</title>
     <style>
+        body{
+            background: url("https://thumbs.dreamstime.com/b/coffee-background-space-text-85121087.jpg");
+        }
         .text-btn {
             background: #2F4F4F;
-            border-radius: 30px 0 0 30px;
+            border-radius: 15px 0 0 15px;
         }
 
         .coffee-btn {
             /*margin-top: 1rem;*/
-            width: 60px;
-            height: 60px;
+            width: 40px;
+            height: 40px;
             background: #b22222;
             border: 2px solid white;
             cursor: pointer;
@@ -38,8 +41,13 @@
             margin-left: 10px;
             font-size: 30px;
             color: wheat;
-
-
+        }
+        #display{
+            width: 100%;
+            height: 100px;
+            background: navy;
+            color: wheat;
+            border: 5px groove black;
         }
     </style>
 </head>
@@ -58,24 +66,34 @@
             </div>
 
             <div class="row text-btn">
-                <div class="rounded-circle coffee-btn" onclick="getCoffee()"></div>
+                <div class="rounded-circle coffee-btn" onclick="getCoffee(51, 'Американо')"></div>
                 <span>Американо - 51 руб. </span>
             </div>
 
             <div class="row text-btn">
-                <div class="rounded-circle coffee-btn"></div>
+                <div class="rounded-circle coffee-btn" onclick="getCoffee(72, 'Гляссе')"></div>
                 <span>Гляссе - 72 руб. </span>
             </div>
 
             <div class="row text-btn">
-                <div class="rounded-circle coffee-btn"></div>
+                <div class="rounded-circle coffee-btn" onclick="getCoffee(44, 'Раф')"></div>
                 <span>Раф - 44 руб. </span>
             </div>
 
             <!--            <button onclick="getCoffee()">Получит кофе</button>-->
         </div>
         <div class="col-md-6">
-            <input type="text" placeholder="Сколько у Вас денег?" id="money">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div id="display" class="text-center pt-1">
+                        Внесите сумму
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <input type="text" placeholder="Сколько у Вас денег?" id="money">
+                </div>
+            </div>
+
         </div>
     </div>
 
